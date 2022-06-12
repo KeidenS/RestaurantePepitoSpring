@@ -23,10 +23,10 @@ public class RestauranteService implements RestauranteServiceImpl {
 	
 
 	@Override
-	public Collection<Restaurante> listar_restaurante() {
+	public Restaurante listar_restaurante() {
 		
 		
-		Collection<Restaurante> lista = repository.listar_restaurante();
+		Restaurante lista = repository.listar_restaurante();
 		
 		
 		

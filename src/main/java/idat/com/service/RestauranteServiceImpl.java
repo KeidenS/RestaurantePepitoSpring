@@ -8,6 +8,6 @@ import idat.com.vo.Usuario_Direccion;
 
 public interface RestauranteServiceImpl {
 	
-	public abstract Collection<Restaurante> listar_restaurante();
+	public abstract Restaurante listar_restaurante();
 
 }

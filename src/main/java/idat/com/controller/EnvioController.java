@@ -8,33 +8,27 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import idat.com.service.DireccionServiceImpl;
-import idat.com.service.RestauranteServiceImpl;
-import idat.com.service.Usuario_DireccionServiceImpl;
+import idat.com.service.EnvioServiceImpl;
 import idat.com.vo.Direccion;
-import idat.com.vo.Plato;
-import idat.com.vo.Restaurante;
-import idat.com.vo.Usuario_Direccion;
+import idat.com.vo.Envio;
 
 @Controller
-@RequestMapping("/restaurante")
-public class RestauranteController {
+@RequestMapping("/envio")
+public class EnvioController {
 	
 	@Autowired
-	private RestauranteServiceImpl us;
+	private EnvioServiceImpl us;
 	
 	
 	
 	
-	@GetMapping("/listar_restaurante")
-	public ResponseEntity<?> listar_restaurante() {
+	@GetMapping("/listar_envio/{id_pedido}")
+	public ResponseEntity<?> listar_envio(@PathVariable Integer id_pedido) {
 		
-		Restaurante p = us.listar_restaurante();
+		Envio p = us.listar_envio(id_pedido);
 		
 		
 		
@@ -46,5 +40,3 @@ public class RestauranteController {
 	
 	
 }
-
-
